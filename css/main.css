@@ -1,0 +1,94 @@
+:root {
+    --main-padding: 15px 30px 5px 30px;
+    --main-radius: 15px 15px 15px 15px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: rgb(229, 239, 245)
+}
+.container {
+    width: 60%;
+    margin: 70px auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "boxone boxone"
+        "boxtwo boxthree";
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 13px rgb(152, 166, 189);
+}
+.boxone {
+    grid-area: boxone;
+    padding: var(--main-padding);
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(255, 255, 255);
+}
+.boxone h2 {
+    color: rgb(42, 178, 175);
+}
+.paraone {
+    color: rgb(192, 223, 52);
+    font-weight: bold;
+}
+.paratwo {
+    color: rgb(152, 166, 189);
+}
+.boxtwo {
+    background-color: rgb(42, 178, 175);
+    grid-area: boxtwo;
+    padding: var(--main-padding);
+    border-radius: 0 0 0 10px;
+}
+.boxthree {
+    background-color: rgb(48, 207, 204);
+    grid-area: boxthree;
+    padding: var(--main-padding);
+    font-size: 14px;
+    border-radius: 0 0 10px 0;
+    color: rgb(229, 239, 245);
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "boxone"
+            "boxtwo"
+            "boxthree";
+    }
+}
+button {
+    text-transform: capitalize;
+    background-color: rgb(192, 223, 52);
+    box-shadow: 0 5px 13px rgb(128, 128, 128);
+    border: none;
+    border-radius: 5px;
+    color: rgb(229, 239, 245);
+    cursor: pointer;
+    display: block;
+    font-family: 'Karla', sans-serif;
+    margin: 20px auto 20px;
+    padding: 15px;
+    width: calc(100% - 5px);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    line-height: 1.2;
+}
+a {
+    text-decoration:  none;
+    color: rgb(229, 239, 245);
+    font-size: 0.8rem;
+}
+a:visited {
+    color: rgba(229, 239, 245, .5);
+}
